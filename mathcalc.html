@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimal Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #000;
+            color: #fff;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* General Section Styling */
+        .section {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Minimalistic Welcome Text */
+        .welcome {
+            font-size: 4rem;
+            letter-spacing: 2px;
+            color: #fff;
+            text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        /* Placeholder Subtitle */
+        .subtitle {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            color: #aaa;
+        }
+
+        /* Text Animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Interactive Button */
+        .cta {
+            margin-top: 30px;
+            padding: 15px 30px;
+            font-size: 1rem;
+            color: #000;
+            background: #0ff;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .cta:hover {
+            background: #fff;
+            color: #000;
+            box-shadow: 0 0 15px #0ff, 0 0 30px #0ff;
+        }
+
+        /* Section Break */
+        .section-break {
+            height: 50px;
+            background: linear-gradient(to bottom, #000, #333, #000);
+        }
+
+        /* About Section Styling */
+        .about-text {
+            font-size: 1.5rem;
+            line-height: 1.8;
+            color: #ccc;
+        }
+
+        .about-highlight {
+            color: #0ff;
+            text-shadow: 0 0 10px #0ff;
+        }
+
+        /* Parallax Image Section */
+        .parallax {
+            background: url('https://via.placeholder.com/1920x1080') no-repeat center center / cover;
+            height: 100vh;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .parallax-text {
+            font-size: 3rem;
+            color: #fff;
+            text-shadow: 0 0 15px #0ff, 0 0 30px #0ff;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px 40px;
+            border-radius: 10px;
+        }
+
+        /* Footer Styling */
+        footer {
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #111;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #0ff;
+            text-decoration: none;
+            margin-left: 5px;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="section" id="home">
+        <h1 class="welcome">Welcome to My Portfolio</h1>
+        <p class="subtitle">Placeholder text for an unforgettable tagline.</p>
+        <button class="cta" onclick="scrollToSection('about')">Learn More</button>
+    </div>
+
+    <!-- Section Break -->
+    <div class="section-break"></div>
+
+    <!-- About Section -->
+    <div class="section" id="about">
+        <p class="about-text">
+            This is a <span class="about-highlight">placeholder</span> description of who you are and what you do.
+            Replace this text with something compelling, concise, and memorable.
+        </p>
+    </div>
+
+    <!-- Section Break -->
+    <div class="section-break"></div>
+
+    <!-- Parallax Section -->
+    <div class="parallax">
+        <div class="parallax-text">An Image That Speaks Volumes</div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <span>© 2024 Your Name | Find me on</span>
+        <a href="#home">LinkedIn</a> | <a href="#home">GitHub</a>
+    </footer>
+
+    <script>
+        function scrollToSection(id) {
+            const section = document.getElementById(id);
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
